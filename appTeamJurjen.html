@@ -30,6 +30,7 @@ function startWorker() {
 			uitkomst+= jsonResponse.nr;
 			uitkomst+= " ";
 			
+			var inhoudBoek = jsonResponse.tekst;
             document.getElementById("result").innerHTML = uitkomst;
 			var t = document.createTextNode("CLICK ME")
 			alert("kk");
@@ -38,7 +39,7 @@ function startWorker() {
 			b.appendChild(el);
 
 			console.log(el);
-			el.innerHTML = "asd;lfkdfjkl";
+			el.innerHTML = inhoudBoek;
 
 			
 			
