@@ -1,13 +1,15 @@
 
 
-function priem(priem){
+function priem(){
 	
-		for (index = 2;index < priem ;index++) {
-			if (priem % index == 0) {
-				postMessage(index);
-			}
-		}      
+	var o ={
+		ISBN : "92837634",
+		autheur : "Erik"
+	}
+	var temo = JSON.stringify(o);
+	postMessage(temo);
+		   
 }  
 
 
-priem(100);
+priem();
