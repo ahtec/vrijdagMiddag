@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body id = idBody>
+
 
 <p>Count numbers: <output id="result"></output></p>
 <button onclick="startWorker()">Start Worker</button> 
@@ -9,6 +10,11 @@
 <script>
 var w;
 var uitkomst="";
+window.onload = function() {
+}			
+			
+
+
 function startWorker() {
     if(typeof(Worker) !== "undefined") {
         if(typeof(w) == "undefined") {
@@ -25,6 +31,17 @@ function startWorker() {
 			uitkomst+= " ";
 			
             document.getElementById("result").innerHTML = uitkomst;
+			var t = document.createTextNode("CLICK ME")
+			alert("kk");
+			var el  = document.createElement("div") ;
+			var b   = document.getElementById("idBody");
+			b.appendChild(el);
+
+			console.log(el);
+			el.innerHTML = "asd;lfkdfjkl";
+
+			
+			
         };
     } else {
         document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
